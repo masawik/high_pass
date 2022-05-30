@@ -35,5 +35,6 @@ gulp.task('default', dev)
 
 export {
   dev,
-  build
+  build,
+  styles
 }
