@@ -1,12 +1,17 @@
 doctype html
 html(lang='ru')
-    include html/head.pug
-    body
-        h1 Hello!
-        p this p from pug
-        .avatar
-        a.text-link(href='#') text-link
-        a.btn-primary(href='#') Узнать больше
-        button.btn-primary(type='button') Отправить
+  include html/head.pug
+  body
+    a.link.link--text(href='#') text-link
+    a.link.link--icon(href='#')
+      svg
+        use(xlink:href='./images/sprites.svg#ig')
 
-        script(src='js/app.min.js')
+    a.btn.btn--primary(href='#') primary link
+    a.btn.btn--secondary(href='#') secondary link
+
+    button.btn.btn--primary primary button
+    button.btn.btn--secondary secondary button
+
+
+    script(src='js/app.min.js')

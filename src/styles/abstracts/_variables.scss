@@ -1,8 +1,8 @@
 @import 'colors';
 
-$primary-font-stack: "Roboto", 'Arial', sans-serif;
+$primary-font-stack: ("Roboto", 'Arial', sans-serif);
 
-$secondary-font-stack: 'TT Firs Neue', 'Arial', sans-serif;
+$secondary-font-stack: ('TT Firs Neue', 'Arial', sans-serif);
 
 $max-width: 1180px;
 
@@ -12,7 +12,14 @@ $breakpoints: (
         'large': 1024px,
 );
 
+$transitionDurations: (
+        'short': 100ms,
+        'default': 300ms,
+        'long': 500ms,
+);
+
 $base-url: '/';
 
 $backgroundColor: $wheat;
-$textColor: $white;
+$primaryTextColor: $white;
+$secondaryTextColor: $cloud;

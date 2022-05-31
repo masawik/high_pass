@@ -1,16 +1,36 @@
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
+@import "variables";
+
+@mixin on-hover() {
+  @media (any-hover: hover) {
+    &:hover {
       @content;
     }
   }
+}
+
+@mixin on-focus() {
+  & {
+    outline: none;
+  }
+
+  &:focus:not(:hover) {
+    @content;
+  }
+}
+
+@mixin on-active() {
+  &:active {
+    transition-duration: map-get($transitionDurations, 'short');
+    @content;
+  }
+}
+
+@mixin transition(
+  $properties: 'color',
+  $transitionDuration: map-get($transitionDurations, 'default')
+) {
+  //на событиях active по дефолту ставится transition-duration = 'short'
+  transition-timing-function: ease-in-out;
+  transition-duration: $transitionDuration;
+  transition-property: $properties;
 }
