@@ -1,0 +1,7 @@
+mixin search-form
+  form.search-form.search-form-js
+    label(for='#search').visually-hidden
+    input(type='text' placeholder='Что будем искать?').search-form__input#search.search-form-input-js
+    button(type='button').btn.btn--icon.search-form__close-button.close-search-form-btn-js
+      svg
+        use(xlink:href='images/sprites.svg#search-close-form')

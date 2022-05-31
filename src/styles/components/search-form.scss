@@ -1,0 +1,58 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.search-form {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  padding: 10px;
+  height: 30px;
+  background-color: $mineShaft;
+
+  @include media('medium') {
+    left: initial;
+    width: 342px;
+  }
+
+  @include media('large') {
+    bottom: -35px;
+  }
+}
+
+.search-form__input {
+  border: none;
+  border-bottom: 1px solid $white;
+  width: 100%;
+  font-family: $secondary-font-stack;
+  color: $mercury;
+  background-color: transparent;
+
+  @include on-hover() {
+    border-bottom: 1px solid $burningOrange;
+  }
+
+  @include on-focus() {
+    border-bottom: 1px solid $burningOrange;
+  }
+
+  @include on-active() {
+    border-bottom: 1px solid $grenadier;
+  }
+}
+
+.search-form__input::placeholder {
+  color: $mercury;
+}
+
+.search-form__close-button {
+  $size: 20px;
+  width: $size;
+  height: $size;
+  color: $silver;
+}
+
+.search-form > .search-form__close-button {
+  margin-left: 10px;
+}
