@@ -7,9 +7,10 @@ $secondary-font-stack: ('TT Firs Neue', 'Arial', sans-serif);
 $max-width: 1180px;
 
 $breakpoints: (
-        'small': 320px,
-        'medium': 768px,
-        'large': 1024px,
+        'small': (min-width: 320px),
+        'medium': (min-width: 768px),
+        'large': (min-width: 1024px),
+        'wide': (min-width: 1320px),
 );
 
 $transitionDurations: (

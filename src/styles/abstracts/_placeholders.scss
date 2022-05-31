@@ -6,6 +6,12 @@
 }
 
 %reset-btn {
+  @extend %resetMP;
   border: none;
   background-color: transparent;
+}
+
+%resetUl {
+  @extend %resetMP;
+  list-style: none;
 }

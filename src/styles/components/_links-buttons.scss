@@ -76,4 +76,19 @@
       background-color: $grenadier;
     }
   }
+
+  &--icon {
+    @include transition((color));
+    @include on-hover() {
+      color: $burningOrange;
+    }
+
+    @include on-active() {
+      color: $grenadier;
+    }
+
+    @include on-focus() {
+      color: $tuscany;
+    }
+  }
 }

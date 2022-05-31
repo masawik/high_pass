@@ -1,3 +1,109 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+.header__top {
+  background-color: $mineShaft;
+}
+
+.header-top__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+
+  @include media('medium') {
+    height: 80px;
+  }
+}
+
+.header-top__logo {
+  width: 111px;
+  height: 18px;
+  color: $white;
+
+  @include media('medium') {
+    width: 166px;
+    height: 26px;
+  }
+
+  @include media('wide') {
+    width: 190px;
+    height: 30px;
+  }
+}
+
+.header-top__menu {
+  display: none;
+
+  @include media('large') {
+    display: flex;
+  }
+
+  .nav-menu__item:not(:last-child) {
+    margin-right: 33px;
+  }
+}
+
+.header-top__search-btn {
+  $size: 20px;
+
+  width: $size;
+  height: $size;
+
+  color: $white;
+
+  @include media('medium') {
+    $size: 25px;
+
+    width: $size;
+    height: $size;
+  }
+
+  @include media('wide') {
+    display: none;
+  }
+}
+
+.header-top__social-links {
+  display: none;
+
+  @include media('wide') {
+    display: block;
+  }
+}
+
+.header__bottom {
+  @include media('large') {
+    display: none;
+  }
+}
+
+.header-bottom {
+  background-color: $tundora;
+}
+
+.header-bottom__content {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.header-bottom__menu-button {
+  width: 20px;
+  height: 18px;
+
+  @include media('medium') {
+    display: none;
+  }
+}
+
+.header-bottom__menu {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+
+  @include media('medium') {
+    display: flex;
+  }
+}

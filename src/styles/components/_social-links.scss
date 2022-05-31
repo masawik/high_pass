@@ -1,0 +1,14 @@
+@import "../abstracts/placeholders";
+
+.social-links {
+  @extend %resetUl;
+  display: flex;
+}
+
+.social-links__item {
+  margin-right: 20px;
+
+  $size: 30px;
+  width: $size;
+  height: $size;
+}

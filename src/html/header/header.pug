@@ -1,0 +1,27 @@
+include _nav-menu
+
+header(class='header')
+  .header__top.header-top
+    .container
+      .header-top__content
+        a(href='#').header-top__logo.link.link--icon
+          svg
+            use(xlink:href='images/sprites.svg#Logo')
+
+        +nav-menu.header-top__menu
+
+        button.btn.btn--icon.header-top__search-btn
+          svg
+            use(xlink:href='images/sprites.svg#search')
+
+        .header-top__social-links
+          include ../components/_social-links
+
+  .header__bottom.header-bottom
+    .container
+      .header-bottom__content
+        button.btn.btn--icon.header-bottom__menu-button
+          svg
+            use(xlink:href='images/sprites.svg#menuBtn')
+
+        +nav-menu.header-bottom__menu

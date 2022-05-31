@@ -13,4 +13,8 @@
 'base/helpers',
 'base/typography';
 
-@import "components/links-buttons";
+@import
+"components/links-buttons",
+"components/social-links";
+
+@import "layout/header";
