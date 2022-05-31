@@ -1,0 +1,14 @@
+%resetMP {
+  margin: 0;
+  padding: 0;
+}
+
+%reset-btn {
+  border: none;
+  background-color: transparent;
+}
+
+%defaultTransition {
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+}

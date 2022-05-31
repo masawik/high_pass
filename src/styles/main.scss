@@ -1,3 +1,14 @@
-@import "_normalize";
-@import "_fonts";
-@import "_global";
+@charset "UTF-8";
+
+@import 'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins',
+'abstracts/_placeholders.scss',
+'abstracts/colors';
+
+@import "vendors/normalize";
+
+@import 'base/base',
+'base/fonts',
+'base/helpers',
+'base/typography';

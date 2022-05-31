@@ -1,0 +1,35 @@
+@import "../abstracts/placeholders";
+@import "../abstracts/variables";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, p {
+  @extend %resetMP
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  min-width: 320px;
+  background-color: $backgroundColor;
+}

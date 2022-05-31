@@ -1,0 +1,18 @@
+@import 'colors';
+
+$primary-font-stack: "Roboto", 'Arial', sans-serif;
+
+$secondary-font-stack: 'TT Firs Neue', 'Arial', sans-serif;
+
+$max-width: 1180px;
+
+$breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+);
+
+$base-url: '/';
+
+$backgroundColor: $wheat;
+$textColor: $white;
