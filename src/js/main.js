@@ -38,5 +38,19 @@ import {gsap} from "gsap";
     searchFormTl.reverse()
     console.log('search form submitted')
   })
-})()
+})();
 
+(function dropdownMenu() {
+  const $dropdownMenu = document.querySelector('.dropdown-menu-js')
+  const $dropdownMenuOpenBtn = document.querySelector('.dropdown-menu-open-btn-js')
+  const $dropdownMenuCloseBtn = document.querySelector('.dropdown-menu-close-btn-js')
+
+  const dropdownMenuTl = gsap.timeline({paused: true})
+
+  dropdownMenuTl
+    .to($dropdownMenu, {display: 'block'})
+    .from($dropdownMenu, {opacity: 0, y: -50, duration: 0.2})
+
+  $dropdownMenuOpenBtn.addEventListener('click', () => dropdownMenuTl.play())
+  $dropdownMenuCloseBtn.addEventListener('click', () => dropdownMenuTl.reverse())
+})();
