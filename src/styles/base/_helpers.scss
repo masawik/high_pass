@@ -1,4 +1,6 @@
 @import "../abstracts/placeholders";
+@import "../abstracts/mixins";
+
 
 .btn-reset {
   @extend %reset-btn;
@@ -6,8 +8,21 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 1290px;
+
   padding: 0 20px;
+
+  @include media('medium') {
+    padding: 0 28px;
+  }
+
+  @include media('large') {
+    padding: 0 31px;
+  }
+
+  @include media('wide') {
+    padding: 0 20px;
+  }
 }
 
 .visually-hidden {

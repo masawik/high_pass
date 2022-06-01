@@ -1,8 +1,13 @@
 mixin dropdown-menu
   .dropdown-menu.dropdown-menu-js
     .container
-      button(type='button').btn.btn--icon.dropdown-menu__close-btn.dropdown-menu-close-btn-js
-        svg
-          use(xlink:href='images/sprites.svg#search-close-form')
-      +nav-menu.dropdown-menu__nav
-      a(href='tel:+749542423532').link.link--text.dropdown-menu__phone +7 (495) 42-423-532
+      .dropdown-menu__content
+        button(type='button').btn.btn--icon.dropdown-menu__close-btn.dropdown-menu-close-btn-js
+          svg
+            use(xlink:href='images/sprites.svg#search-close-form')
+
+        +nav-menu.dropdown-menu__nav
+
+        a(href='tel:+749542423532').link.link--text.dropdown-menu__phone +7 (495) 42-423-532
+          svg.dropdown-menu__phone-icon
+            use(xlink:href='images/sprites.svg#phone')

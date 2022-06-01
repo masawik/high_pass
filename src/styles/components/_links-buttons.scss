@@ -17,8 +17,6 @@
   }
 
   &--text {
-    padding: 0 0.3em;
-
     @include on-focus() {
       background-color: $tuscany;
     }

@@ -6,9 +6,8 @@ header(class='header')
   .header__top.header-top
     .container
       .header-top__content
-        a(href='#').header-top__logo.link.link--icon
-          svg
-            use(xlink:href='images/sprites.svg#Logo')
+        a(href='#').link.link--text.header-top__logo-link
+          img(src='images/Logo.svg' alt='logo').header-top__logo
 
         +nav-menu.header-top__menu
 
