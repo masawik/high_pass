@@ -1,5 +1,3 @@
-@import "variables";
-
 @mixin on-hover() {
   @media (any-hover: hover) {
     &:hover {

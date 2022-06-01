@@ -1,7 +1,3 @@
-@import "../abstracts/placeholders";
-@import "../abstracts/mixins";
-
-
 .btn-reset {
   @extend %reset-btn;
 }

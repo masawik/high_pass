@@ -1,18 +1,16 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
-
 .search-form {
   position: absolute;
-  right: 0;
-  left: 0;
+  right: -20px;
+  left: -20px;
   display: none;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   height: 30px;
   background-color: $mineShaft;
 
   @include media('medium') {
     left: initial;
+    right: 0;
     width: 342px;
   }
 

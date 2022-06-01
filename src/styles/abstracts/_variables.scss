@@ -1,10 +1,6 @@
-@import 'colors';
-
 $primary-font-stack: ("Roboto", 'Arial', sans-serif);
 
 $secondary-font-stack: ('TT Firs Neue', 'Arial', sans-serif);
-
-$max-width: 1180px;
 
 $breakpoints: (
         'small': (min-width: 320px),

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import 'abstracts/variables',
+@import 'abstracts/colors',
+'abstracts/variables',
 'abstracts/functions',
 'abstracts/mixins',
-'abstracts/_placeholders.scss',
-'abstracts/colors';
+'abstracts/_placeholders.scss';
 
 @import "vendors/normalize";
 
@@ -15,14 +15,12 @@
 
 @import "components/nav-menu",
 "components/search-form",
+"components/links-buttons",
 "components/dropdown-menu",
 "components/social-links",
 "components/tag",
-"components/links-buttons",
 "components/student-works",
 "components/banner";
-
-//todo убрать импорты из всех файлов кроме этого
 
 @import "layout/header",
 "layout/hero";
