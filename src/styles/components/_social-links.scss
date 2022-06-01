@@ -1,14 +1,15 @@
 @import "../abstracts/placeholders";
 
 .social-links {
-  @extend %resetUl;
-  display: flex;
-}
+  @extend %reset-list;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 10px;
+  grid-template-columns: repeat(3, auto);
 
-.social-links__item {
-  margin-right: 20px;
-
-  $size: 30px;
-  width: $size;
-  height: $size;
+  &__item {
+    $size: 30px;
+    width: $size;
+    height: $size;
+  }
 }

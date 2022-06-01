@@ -1,0 +1,13 @@
+@import "../abstracts/placeholders";
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-items: center;
+  row-gap: 10px;
+
+  &__item {
+    @extend %reset-list;
+  }
+}
+

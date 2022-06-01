@@ -1,7 +1,8 @@
-- var socialLinks = [{'sprite': 'ig', 'href': '#'},{'sprite': 'fb', 'href': '#'},{'sprite': 'vk', 'href': '#'},]
+- var socialLinks = [{'sprite': 'ig', 'href': '#'},{'sprite': 'fb', 'href': '#'},{'sprite': 'vk', 'href': '#'}]
 
 ul.social-links
   each socialItem in socialLinks
-    a(href=socialItem.href).link.link--icon.social-links__item
-      svg
-        use(xlink:href='images/sprites.svg#' + socialItem.sprite)
+    li.social-links__item
+      a(href=socialItem.href).link.link--icon
+        svg
+          use(xlink:href='images/sprites.svg#' + socialItem.sprite)

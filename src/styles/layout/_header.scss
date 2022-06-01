@@ -11,14 +11,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  padding: 25px 0;
 
   @include media('medium') {
-    height: 80px;
+    padding: 27px 0;
+  }
+
+  @include media('wide') {
+    padding: 25px 0;
   }
 }
 
 .header-top__logo {
+  margin-right: 40px;
   width: 111px;
   height: 18px;
   color: $white;
@@ -36,13 +41,10 @@
 
 .header-top__menu {
   display: none;
+  column-gap: 33px;
 
   @include media('large') {
-    display: flex;
-  }
-
-  .nav-menu__item:not(:last-child) {
-    margin-right: 33px;
+    display: grid;
   }
 }
 
@@ -74,7 +76,6 @@
   }
 }
 
-
 .header__bottom {
   @include media('large') {
     display: none;
@@ -88,7 +89,7 @@
 .header-bottom__content {
   display: flex;
   align-items: center;
-  height: 45px;
+  padding: 12px 0;
 }
 
 .header-bottom__menu-button {
@@ -106,6 +107,6 @@
   width: 100%;
 
   @include media('medium') {
-    display: flex;
+    display: grid;
   }
 }
