@@ -1,0 +1,35 @@
+.student-works {
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $secondary-font-stack;
+    font-size: 18px;
+    color: $mineShaft;
+    line-height: 18.72px;
+
+    @include media('medium') {
+      font-size: 22px;
+      line-height: 21px;
+    }
+
+    @include media('large') {
+      margin-bottom: 18px;
+      font-size: 24px;
+      line-height: 24.96px;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__image {
+    width: 100%;
+
+    &:first-child {
+      grid-column: 1 / 3;
+    }
+  }
+}

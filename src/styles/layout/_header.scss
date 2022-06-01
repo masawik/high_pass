@@ -1,6 +1,10 @@
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
+.header {
+  margin-bottom: 30px;
 
+  @include media('medium') {
+    margin-bottom: 36px;
+  }
+}
 
 .header__top {
   background-color: $mineShaft;
@@ -11,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 19px 0;
+  padding: 21px 0;
 
   @include media('medium') {
     padding: 21px 0;
@@ -105,10 +109,10 @@
 .header-bottom__content {
   display: flex;
   align-items: center;
-  padding: 14px 0 13px;
+  padding: 13px 0;
 
   @include media('medium') {
-    padding: 11px 0 12px;
+    padding: 13px 0 14px;
   }
 }
 

@@ -1,0 +1,13 @@
+.tag {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  padding: 4px 7px;
+  font-size: 12px;
+  background-color: $mineShaft;
+
+  @include media('medium') {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+}

@@ -13,11 +13,16 @@
 'base/helpers',
 'base/typography';
 
-@import
-"components/links-buttons",
-"components/nav-menu",
+@import "components/nav-menu",
 "components/search-form",
 "components/dropdown-menu",
-"components/social-links";
+"components/social-links",
+"components/tag",
+"components/links-buttons",
+"components/student-works",
+"components/banner";
 
-@import "layout/header";
+//todo убрать импорты из всех файлов кроме этого
+
+@import "layout/header",
+"layout/hero";

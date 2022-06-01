@@ -1,0 +1,85 @@
+.banner {
+  position: relative;
+  @extend %defaultBackground;
+
+  background-image: image('/banner/neon_photoset@320.jpg');
+
+  @include media('medium') {
+    background-image: image('/banner/neon_photoset@768.jpg');
+  }
+
+  @include media('large') {
+    background-image: image('/banner/neon_photoset@1024.jpg');
+  }
+
+  @include media('wide') {
+    background-image: image('/banner/neon_photoset@raw.jpg');
+  }
+
+  &__tag {
+    @include media('medium') {
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 234px 46px 30px 30px;
+
+    @include media('medium') {
+      padding: 225px 46px 30px 29px;
+    }
+
+    @include media('large') {
+      padding: 423px 31px 32px 29px;
+    }
+
+    @include media('wide') {
+      padding: 412px 31px 60px 60px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+
+    @include media('medium') {
+      margin-bottom: 14px;
+    }
+
+    @include media('wide') {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__title {
+    order: 2;
+    margin-bottom: 12px;
+    font-family: $secondary-font-stack;
+    font-size: 24px;
+    line-height: 26.4px;
+
+    @include media('medium') {
+      margin-bottom: 24px;
+      font-size: 34px;
+      line-height: 30.6px;
+    }
+
+    @include media('wide') {
+      margin-bottom: 19px;
+      font-size: 36px;
+      line-height: 37.44px;
+    }
+  }
+
+  &__button {
+    order: 3;
+    padding: 12px 23px;
+
+    @include media('medium') {
+      padding: 15px 23px;
+    }
+  }
+}
