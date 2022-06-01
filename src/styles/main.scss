@@ -14,6 +14,7 @@
 'base/typography';
 
 @import "components/nav-menu",
+"components/form-inputs",
 "components/search-form",
 "components/links-buttons",
 "components/dropdown-menu",
@@ -23,4 +24,7 @@
 "components/banner";
 
 @import "layout/header",
-"layout/hero";
+"layout/hero",
+"layout/about";
+
+//todo изображения не меняются в размере

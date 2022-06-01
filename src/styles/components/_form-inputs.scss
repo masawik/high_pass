@@ -1,0 +1,46 @@
+.text-input {
+  @extend %reset-text-input;
+  box-sizing: border-box;
+  padding: 12px 23px;
+  border: 1px solid transparent;
+
+  &--dark {
+    color: $white;
+    background-color: $tundora;
+
+    @include transition((color, border));
+
+    &::placeholder {
+      color: $cloud;
+    }
+
+    &.#{$errorClass} {
+      border: 1px solid $BurntSienna;
+    }
+
+    //  todo сделать error-label
+  }
+
+  &--light {
+    color: $mineShaft;
+    background-color: $mercury;
+
+    @include transition((color, border));
+
+    &::placeholder {
+      color: $dustyGray;
+    }
+
+    &.#{$errorClass} {
+      border: 1px solid $redOrange;
+    }
+  }
+
+  @include on-hover() {
+    color: $burningOrange;
+  }
+
+  @include on-focus() {
+    border: 1px solid $burningOrange;
+  }
+}

@@ -20,7 +20,7 @@
 
   &__gallery {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(2, auto) / repeat(2, auto);
     gap: 30px;
   }
 
