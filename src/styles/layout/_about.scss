@@ -31,13 +31,7 @@
 
   &__title {
     margin-bottom: 5px;
-    font-family: $secondary-font-stack;
-    font-size: 18px;
-    font-weight: 700;
-
-    @include media('medium') {
-      font-size: 24px;
-    }
+    color: $white;
   }
 
   &__text {

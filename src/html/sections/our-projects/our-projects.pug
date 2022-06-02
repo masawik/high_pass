@@ -1,0 +1,19 @@
+include ../../components/picture
+include ../../components/card
+
+section.our-projects
+  .container
+    h2.section-title.our-projects__title Наши проекты
+    .our-projects__cards
+      +card('Синтетически, смешаны с не уникальными данными до степени...', '16 июня', 'пейзаж')
+        +picture('forest', 'images/cards/card-1')
+      +card('В своём стремлении улучшить опыт мы упускаем, что явные...', '28 мая', 'портрет')
+        +picture('forest', 'images/cards/card-2')
+      +card('Равным образом, высокое качество позиционных...', '14 мая', 'предмет')
+        +picture('forest', 'images/cards/card-3')
+
+
+      +card('Как принято считать, многие известные личности и по сей день остаются уделом либералов...', '28 мая', 'ретушь')
+        +picture('forest', 'images/cards/card-5')
+      +card('С учётом сложившейся международной обстановки, новая модель организационной...', '14 мая', 'портрет')
+        +picture('forest', 'images/cards/card-6')

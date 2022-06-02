@@ -1,0 +1,16 @@
+.date {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+  color: $dustyGray;
+
+  &::before {
+    position: absolute;
+    left: 0;
+
+    background-image: image('calendar.svg');
+    @include size(14px);
+    content: '';
+    @extend %defaultBackground;
+  }
+}

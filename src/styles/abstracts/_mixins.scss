@@ -46,3 +46,8 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}

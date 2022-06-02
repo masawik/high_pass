@@ -7,3 +7,14 @@ body {
     font-size: 16px;
   }
 }
+
+.section-title {
+  font-family: $secondary-font-stack;
+  font-size: 18px;
+  color: $mineShaft;
+  font-weight: 700;
+
+  @include media('medium') {
+    font-size: 24px;
+  }
+}

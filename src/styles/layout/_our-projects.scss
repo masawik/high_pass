@@ -1,0 +1,12 @@
+.our-projects {
+  padding: 52px 0;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 26px;
+  }
+}

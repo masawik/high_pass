@@ -14,7 +14,7 @@
       color: $cloud;
     }
 
-    .#{$errorClass}.#{&} {
+    .#{$errorClass}#{&} {
       border: 1px solid $BurntSienna;
     }
   }
