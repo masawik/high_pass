@@ -25,7 +25,9 @@
   }
 
   &__image {
-    width: 100%;
+    img {
+      width: 100%;
+    }
 
     &:first-child {
       grid-column: 1 / 3;

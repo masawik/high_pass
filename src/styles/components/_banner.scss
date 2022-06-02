@@ -2,18 +2,18 @@
   position: relative;
   @extend %defaultBackground;
 
-  background-image: image('/banner/neon_photoset@320.jpg');
+  background-image: image('banner/neon_photoset@320.jpg');
 
   @include media('medium') {
-    background-image: image('/banner/neon_photoset@768.jpg');
+    background-image: image('banner/neon_photoset@768.jpg');
   }
 
   @include media('large') {
-    background-image: image('/banner/neon_photoset@1024.jpg');
+    background-image: image('banner/neon_photoset@1024.jpg');
   }
 
   @include media('wide') {
-    background-image: image('/banner/neon_photoset@raw.jpg');
+    background-image: image('banner/neon_photoset@raw.jpg');
   }
 
   &__tag {
