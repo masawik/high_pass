@@ -1,6 +1,10 @@
 .our-projects {
   padding: 52px 0;
 
+  @include media('medium') {
+    padding: 69px 0;
+  }
+
   &__title {
     margin-bottom: 16px;
   }
@@ -8,6 +12,65 @@
   &__cards {
     display: grid;
     gap: 28px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+  "item-1"
+  "item-2"
+  "item-3"
+  "item-4"
+  "item-5"
+  "item-6"
+  "item-7";
+
+    @include media('medium') {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 30px;
+      row-gap: 30px;
+      grid-template-areas:
+    "item-1 item-1 item-2 item-2 item-3 item-3"
+    "item-4 item-4 item-4 item-4 item-4 item-4"
+    "item-5 item-5 item-5 item-6 item-6 item-6"
+    "item-7 item-7 item-7 item-7 item-7 item-7";
+    }
+
+    @include media('large') {
+      grid-template-columns: repeat(16, 1fr);
+      row-gap: 16px;
+      grid-template-areas:
+    "item-1 item-1 item-1 item-1 item-2 item-2 item-2 item-2 item-3 item-3 item-3 item-3 item-3 item-3 item-3 item-3"
+    "item-4 item-4 item-4 item-4 item-4 item-4 item-4 item-4 item-4 item-4 item-5 item-5 item-5 item-5 item-5 item-5"
+    "item-6 item-6 item-6 item-6 item-6 item-6 item-7 item-7 item-7 item-7 item-7 item-7 item-7 item-7 item-7 item-7"
+    }
+
+    @include media('wide') {
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: 30px;
+      grid-template-areas:
+    "item-1 item-1 item-2 item-2 item-3 item-3 item-4 item-4 item-4 item-4 item-4 item-4"
+    "item-7 item-7 item-7 item-7 item-7 item-7 item-5 item-5 item-5 item-6 item-6 item-6";
+    }
+  }
+
+  @for $grid-item from 1 through 7 {
+    &__item:nth-child(#{$grid-item}) {
+      grid-area: item-#{$grid-item};
+    }
+  }
+
+  &__banner {
+    grid-column: 1 / 4;
+
+    @include media('medium') {
+      min-height: 300px;
+    }
+
+    @include media('large') {
+      min-height: 307px;
+    }
+
+    @include media('wide') {
+      min-height: 300px;
+    }
   }
 
   &__banner .banner__tag {
@@ -17,6 +80,10 @@
   &__banner:nth-child(1n-1) {
     @include background-image-all-sizes('cards/card-4', 'jpg');
     margin-bottom: 2px;
+
+    @include media('large') {
+      margin-bottom: 0;
+    }
   }
 
   &__banner:nth-child(2n-1) {

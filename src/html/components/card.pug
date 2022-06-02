@@ -9,4 +9,5 @@ mixin card(title, date, tagText, href='#')
         block
 
     a(href=href).link.link--text.card__title= title
+    //todo спозиционировать дату через flex justify-space-between
     +date(date)
