@@ -8,6 +8,10 @@
   @include media('large') {
     padding: 36px 0 64px;
   }
+
+  &__banner {
+    @include background-image-all-sizes('banner/neon_photoset', 'jpg');
+  }
 }
 
 .hero__content {

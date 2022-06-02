@@ -51,3 +51,19 @@
   width: $size;
   height: $size;
 }
+
+@mixin background-image-all-sizes($file-path, $ext) {
+  background-image: image($file-path + '@320.' + $ext);
+
+  @include media('medium') {
+    background-image: image($file-path + '@768.' + $ext);
+  }
+
+  @include media('large') {
+    background-image: image($file-path + '@1024.' + $ext);
+  }
+
+  @include media('wide') {
+    background-image: image($file-path + '@raw.' + $ext);
+  }
+}

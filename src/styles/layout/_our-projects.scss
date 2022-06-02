@@ -7,6 +7,19 @@
 
   &__cards {
     display: grid;
-    gap: 26px;
+    gap: 28px;
+  }
+
+  &__banner .banner__tag {
+    padding: 4px 14px;
+  }
+
+  &__banner:nth-child(1n-1) {
+    @include background-image-all-sizes('cards/card-4', 'jpg');
+    margin-bottom: 2px;
+  }
+
+  &__banner:nth-child(2n-1) {
+    @include background-image-all-sizes('cards/card-7', 'jpg');
   }
 }

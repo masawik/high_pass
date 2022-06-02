@@ -1,9 +1,22 @@
 include tag
+include date
 
-mixin banner
-  article.banner
-    +tag('мастеркласс').banner__tag
-    .banner__content
-      h3.banner__title Неоновый фотосет 2.0 7&nbsp;июля 20:00
-      span.banner__description Мастер-класс от Игоря Робова
-      a(href='#').btn.btn--primary.banner__button Узнать больше
+// Attributes
+//  tag: text
+//  date: text || null
+//  title: text
+//  btnText: text
+//  descr: text
+//  decrPosition: 'up' || 'down'
+//  href: text (link)
+//  btnType: 'primary' || 'secondary'
+
+mixin banner(tag, date, title, btnText, descr, decrPosition='down', href='#', btnType='secondary')
+  article.banner&attributes(attributes)
+    +tag(tag).banner__tag
+    .banner__content(class=date ? 'banner__content--with-date': null)
+      if date
+        +date(date).banner__date
+      h3.banner__title= title
+      span(class=`banner__description--${decrPosition}`).banner__description= descr
+      a(href=href class=`btn--${btnType} banner__button--${btnType}`).btn.banner__button= btnText
