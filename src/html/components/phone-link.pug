@@ -1,4 +1,4 @@
-mixin phone-link(phone='+7 (495) 42-423-532')
-  a(href='tel:' + phone).link.link--text.phone-link&attributes(attributes)= phone
+mixin phone-link(phoneHref='+749542423532', text='+7 (495) 42-423-532')
+  a(href='tel:' + phoneHref).link.link--text.phone-link&attributes(attributes)= text
     svg.phone-link__icon
       use(xlink:href='images/sprites.svg#phone')

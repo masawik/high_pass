@@ -108,9 +108,7 @@
   }
 
   &__phone {
-    @include media('large') {
-      display: inline-flex;
-    }
+    display: inline-flex;
 
     @include media('wide') {
       color: $white;

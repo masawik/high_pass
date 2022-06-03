@@ -9,7 +9,7 @@ import {gsap} from "gsap";
 
   searchFormTl
     .to($searchForm, {display: 'flex'})
-    .from($searchForm, {opacity: 0, x: 50, duration: 0.2})
+    .from($searchForm, {opacity: 0, y: -50, duration: 0.2})
 
   const clickOutSide = e => {
     if (!$searchForm.contains(e.target)) closeForm()

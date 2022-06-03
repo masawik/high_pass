@@ -3,6 +3,7 @@
 
 mixin nav-menu
   nav.nav-menu(class!=attributes.class)
-    each item in menuItems
-      li.nav-menu__item
-        a.link.link--text(href=item.href)= item.title
+    ul
+      each item in menuItems
+        li.nav-menu__item
+          a.link.link--text(href=item.href)= item.title

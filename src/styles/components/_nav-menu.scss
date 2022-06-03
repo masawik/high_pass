@@ -4,6 +4,10 @@
   justify-items: center;
   row-gap: 10px;
 
+  ul {
+    display: contents;
+  }
+
   &__item {
     @extend %reset-list;
   }
