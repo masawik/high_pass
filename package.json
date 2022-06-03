@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "gsap": "^3.10.4",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "ymaps": "^0.2.1"
   }
 }

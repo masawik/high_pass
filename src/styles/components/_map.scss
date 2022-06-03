@@ -1,7 +1,9 @@
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
 .map {
   position: relative;
-  //todo убрать
-  height: 472px;
 
   &__info {
     position: absolute;
@@ -11,11 +13,15 @@
 
     background-color: $mineShaftSemiTransparent;
   }
+
+  &__map {
+    height: 472px;
+  }
 }
 
 .map-info {
   padding: 26px 34px 14px 19px;
-  min-height: 105px;
+  min-height: 117px;
 
   &__close-btn {
     position: absolute;
@@ -34,8 +40,9 @@
   }
 
   &__text {
-    margin-bottom: 11px;
+    margin-bottom: 14px;
     color: $secondaryTextColor;
+    line-height: 18px;
   }
 
 
