@@ -57,17 +57,34 @@
     }
   }
 
+  &__item {
+    @include media('medium') {
+      grid-column-end: span 2;
+    }
+
+    @include media('large') {
+      grid-column-end: span 4;
+    }
+
+    @include media('wide') {
+      grid-column-end: span 2;
+    }
+  }
+
   &__banner {
     @include media('medium') {
       min-height: 300px;
+      grid-column-end: span 6;
     }
 
     @include media('large') {
       min-height: 307px;
+      grid-column-end: span 10;
     }
 
     @include media('wide') {
       min-height: 300px;
+      grid-column-end: span 6;
     }
 
     .banner__tag {
