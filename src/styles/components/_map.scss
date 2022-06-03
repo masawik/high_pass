@@ -5,6 +5,20 @@
 .map {
   position: relative;
 
+  height: 472px;
+
+  @include media('medium') {
+    height: 468px;
+  }
+
+  @include media('wide') {
+    height: 460px;
+  }
+
+  &__map {
+    height: 100%;
+  }
+
   &__info {
     position: absolute;
     right: 0;
@@ -12,16 +26,42 @@
     left: 0;
 
     background-color: $mineShaftSemiTransparent;
-  }
 
-  &__map {
-    height: 472px;
+    @include media('wide') {
+      top: 0;
+      right: unset;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
 .map-info {
   padding: 26px 34px 14px 19px;
   min-height: 117px;
+
+  @include media('medium') {
+    padding: 25px 31px 0 30px;
+    min-height: 132px;
+  }
+
+  @include media('large') {
+    padding: 25px 265px 0 30px;
+  }
+
+  @include media('wide') {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0;
+    width: calc(50% - 15px);
+    justify-items: center;
+  }
+
+  &__content {
+    @include media('wide') {
+      padding: 20px 50px 0 60px;
+    }
+  }
 
   &__close-btn {
     position: absolute;
@@ -37,13 +77,43 @@
     font-family: $secondary-font-stack;
     font-size: 18px;
     line-height: 22px;
+
+    @include media('medium') {
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
   }
 
   &__text {
     margin-bottom: 14px;
     color: $secondaryTextColor;
     line-height: 18px;
+
+    @include media('medium') {
+      margin-bottom: 5px;
+      max-width: 440px;
+      line-height: 28px;
+    }
+
+    @include media('large') {
+      display: inline;
+      margin-right: 1em;
+      max-width: 293px;
+    }
+
+    @include media('wide') {
+      display: block;
+      margin-bottom: 2px;
+    }
   }
 
+  &__phone {
+    @include media('large') {
+      display: inline-flex;
+    }
 
+    @include media('wide') {
+      color: $white;
+    }
+  }
 }

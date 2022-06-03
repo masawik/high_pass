@@ -5,6 +5,10 @@
     padding: 69px 0;
   }
 
+  @include media('wide') {
+    padding: 69px 0 68px;
+  }
+
   &__title {
     margin-bottom: 16px;
   }

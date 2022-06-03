@@ -5,11 +5,13 @@
   font-weight: 500;
   color: $burningOrange;
 
+  @include media('medium') {
+    font-size: 16px;
+  }
+
   &__icon {
     order: -1;
-    $size: 16px;
+    @include size(16px);
     margin-right: 3px;
-    width: $size;
-    height: $size;
   }
 }

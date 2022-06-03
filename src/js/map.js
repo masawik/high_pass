@@ -6,7 +6,7 @@ import ymaps from 'ymaps'
   try {
     const maps = await ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
     const map = new maps.Map(mapContainer, {
-      center: [55.761670695581714,37.61847402181028],
+      center: [55.761670695581714, 37.61847402181028],
       controls: [],
       zoom: 14
     }, {suppressMapOpenBlock: true})
@@ -14,7 +14,7 @@ import ymaps from 'ymaps'
     map.behaviors.disable(['drag', 'scrollZoom'])
 
     const myPlacemark = new maps.Placemark(
-      [55.76821389659309,37.62759539240239],
+      [55.76821389659309, 37.62759539240239],
       {},
       {
         iconLayout: "default#image",
@@ -24,6 +24,7 @@ import ymaps from 'ymaps'
     )
 
     map.geoObjects.add(myPlacemark)
+    map.container.fitToViewport()
 
   } catch (error) {
     console.error("error while loading Yandex map", error)

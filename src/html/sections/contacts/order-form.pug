@@ -1,0 +1,8 @@
+mixin order-form
+  form.order-form&attributes(attributes)
+    .order-form__title Оставить заявку
+    .order-form__text Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
+    input(type='text' placeholder='Имя').text-input.text-input--light.order-form__input
+    input(type='email' placeholder='E-mail').text-input.text-input--light.order-form__input
+    textarea(placeholder='Комментарий').text-input.text-input--light.order-form__textarea
+    button(type='submit').btn.btn--primary.order-form__button Отправить

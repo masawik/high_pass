@@ -41,4 +41,8 @@
   @include on-focus() {
     border: 1px solid $burningOrange;
   }
+
+  @include on-active() {
+    border: 1px solid $burningOrange;
+  }
 }
