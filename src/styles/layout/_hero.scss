@@ -1,27 +1,17 @@
 .hero {
-  padding: 30px 0 40px;
-
-  @include media('medium') {
-    padding: 36px 0 63px;
-  }
-
-  @include media('large') {
-    padding: 36px 0 64px;
-  }
-
   &__banner {
     @include background-image-all-sizes('banner/neon_photoset', 'jpg');
   }
-}
 
-.hero__content {
-  display: grid;
-  align-items: stretch;
-  grid-template-columns: 1fr;
-  gap: 35px;
+  &__content {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    gap: 35px;
 
-  @include media('medium') {
-    gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    @include media('medium') {
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

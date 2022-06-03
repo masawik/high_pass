@@ -1,0 +1,58 @@
+.hero {
+  padding: 30px 0 40px;
+
+  @include media('medium') {
+    padding: 36px 0 63px;
+  }
+
+  @include media('large') {
+    padding: 36px 0 64px;
+  }
+}
+
+.about {
+  padding: 34px 0 60px;
+
+  @include media('medium') {
+    padding: 34px 0 62px;
+  }
+
+  @include media('large') {
+    padding: 34px 0 59px;
+  }
+
+  @include media('wide') {
+    padding: 34px 0 47px;
+  }
+}
+
+.our-projects {
+  padding: 52px 0;
+
+  @include media('medium') {
+    padding: 69px 0;
+  }
+
+  @include media('wide') {
+    padding: 69px 0 68px;
+  }
+}
+
+.contacts {
+  padding-bottom: 48px;
+
+  @include media('medium') {
+    padding-bottom: 67px;
+  }
+
+  @include media('large') {
+    padding-top: 8px;
+    padding-bottom: 66px;
+  }
+
+  @include media('wide') {
+    padding-top: 0;
+    padding-bottom: 66px;
+  }
+}
+

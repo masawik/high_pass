@@ -1,18 +1,5 @@
 .about {
-  padding: 34px 0 60px;
   background-color: $mineShaft;
-
-  @include media('medium') {
-    padding: 34px 0 62px;
-  }
-
-  @include media('large') {
-    padding: 34px 0 59px;
-  }
-
-  @include media('wide') {
-    padding: 34px 0 47px;
-  }
 
   &__content {
     display: grid;
