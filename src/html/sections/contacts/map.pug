@@ -4,7 +4,7 @@ mixin map
   .map&attributes(attributes)
     .map__map.map-js
     .map__info.map-info
-      button(type='button').btn.btn--icon.map-info__close-btn.map-info__close-btn-js
+      button(type='button' aria-label='Закрыть').btn.btn--icon.map-info__close-btn.map-info__close-btn-js
         svg
           use(xlink:href='images/sprites.svg#search-close-form')
       .map-info__content

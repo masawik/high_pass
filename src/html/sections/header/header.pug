@@ -7,14 +7,14 @@ header(class='header')
     .container
       .header-top__content
         a(href='#').link.link--text.header-top__logo-link
-          img(src='images/Logo.svg' alt='logo').header-top__logo
+          img(src='images/Logo.svg' alt='High pass logo').header-top__logo
 
         +nav-menu.header-top__menu
 
         .header-top__social-links
           include ../../components/social-links
 
-        button.btn.btn--icon.header-top__search-btn.open-search-form-btn-js
+        button(aria-label='Открыть форму поиска').btn.btn--icon.header-top__search-btn.open-search-form-btn-js
           svg
             use(xlink:href='images/sprites.svg#search')
 

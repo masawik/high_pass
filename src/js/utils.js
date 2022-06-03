@@ -7,3 +7,5 @@ export class Overflow {
     document.body.style.overflow = ''
   }
 }
+
+export const setTabIndex = ($el, value) => $el.tabIndex = value

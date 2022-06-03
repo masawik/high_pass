@@ -5,7 +5,6 @@ import {Overflow} from "./utils.js";
   const $dropdownMenu = document.querySelector('.dropdown-menu-js')
   const $dropdownMenuOpenBtn = document.querySelector('.dropdown-menu-open-btn-js')
   const $dropdownMenuCloseBtn = document.querySelector('.dropdown-menu-close-btn-js')
-
   const dropdownMenuTl = gsap.timeline({paused: true})
 
   dropdownMenuTl
@@ -14,7 +13,10 @@ import {Overflow} from "./utils.js";
 
   const open = () => {
     Overflow.disable()
-    dropdownMenuTl.play()
+    dropdownMenuTl.play().eventCallback('onComplete', () => {
+      $dropdownMenuCloseBtn.focus()
+    })
+
   }
 
   const close = () => {
