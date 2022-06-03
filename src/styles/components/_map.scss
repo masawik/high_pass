@@ -1,0 +1,42 @@
+.map {
+  position: relative;
+  //todo убрать
+  height: 472px;
+
+  &__info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $mineShaftSemiTransparent;
+  }
+}
+
+.map-info {
+  padding: 26px 34px 14px 19px;
+  min-height: 105px;
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $doveGray;
+
+    @include size(20px)
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $secondary-font-stack;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__text {
+    margin-bottom: 11px;
+    color: $secondaryTextColor;
+  }
+
+
+}

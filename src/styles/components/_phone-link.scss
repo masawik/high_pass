@@ -1,0 +1,15 @@
+.phone-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: $burningOrange;
+
+  &__icon {
+    order: -1;
+    $size: 16px;
+    margin-right: 3px;
+    width: $size;
+    height: $size;
+  }
+}

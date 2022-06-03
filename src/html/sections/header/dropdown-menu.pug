@@ -1,3 +1,5 @@
+include ../../components/phone-link
+
 mixin dropdown-menu
   .dropdown-menu.dropdown-menu-js
     .container
@@ -7,7 +9,4 @@ mixin dropdown-menu
             use(xlink:href='images/sprites.svg#search-close-form')
 
         +nav-menu.dropdown-menu__nav
-
-        a(href='tel:+749542423532').link.link--text.dropdown-menu__phone +7 (495) 42-423-532
-          svg.dropdown-menu__phone-icon
-            use(xlink:href='images/sprites.svg#phone')
+        +phone-link().dropdown-menu__phone
