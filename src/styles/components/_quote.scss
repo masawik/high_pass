@@ -1,0 +1,13 @@
+.quote {
+  color: $cloud;
+  line-height: 22px;
+
+  &__author {
+    color: $doveGray;
+
+    &::before {
+      content: '© ';
+    }
+  }
+}
+

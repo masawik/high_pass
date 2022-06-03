@@ -1,10 +1,18 @@
 .contacts {
+  padding-bottom: 48px;
+
+  @include media('medium') {
+    padding-bottom: 67px;
+  }
+
   @include media('large') {
-    padding: 8px 0;
+    padding-top: 8px;
+    padding-bottom: 66px;
   }
 
   @include media('wide') {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 66px;
   }
 
   &__title {
