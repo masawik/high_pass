@@ -20,8 +20,8 @@
     line-height: 18px;
 
     @include media('medium') {
-      line-height: 22px;
       margin-bottom: 13px;
+      line-height: 22px;
     }
   }
 

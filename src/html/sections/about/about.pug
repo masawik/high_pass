@@ -12,8 +12,9 @@ section.about&attributes(attributes)
           source(media="(min-width: 768px)" srcset="images/about/camera@768.jpg" type="image/jpeg")
           img(src='images/about/camera@320.jpg' alt='camera')
 
-        form.about__subscribe-form.subscribe-form
+        form.about__subscribe-form.subscribe-form.subscribe-form-js
           div.subscribe-form__title Подписаться на рассылку
           .subscribe-form__controls
-            input(type='email' placeholder='E-mail').subscribe-form__input.text-input.text-input--dark
+            label.text-input.text-input--dark.subscribe-form__input-label
+              input(type='email' placeholder='E-mail').text-input__input.subscribe-form-js__email.subscribe-form__input
             button(type='submit').btn.btn--primary.subscribe-form__button Отправить

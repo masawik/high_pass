@@ -63,6 +63,7 @@
   }
 
   &__content {
+    font-style: normal;
     @include media('wide') {
       padding: 20px 50px 0 60px;
     }

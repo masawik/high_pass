@@ -1,48 +1,74 @@
 .text-input {
-  @extend %reset-text-input;
-  padding: 12px 23px;
-  border: 1px solid transparent;
-  box-sizing: border-box;
+  position: relative;
+  width: 100%;
 
-  &--dark {
-    color: $white;
-    background-color: $tundora;
+  .#{$errorClass} + .#{$errorClass}__label {
+    position: absolute;
+    top: 3px;
+    left: 23px;
+    font-size: 9px;
+  }
 
-    @include transition((color, border));
+  &__input {
+    width: 100%;
+    @extend %reset-text-input;
+    padding: 12px 23px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
 
-    &::placeholder {
-      color: $cloud;
+    @include on-hover() {
+      color: $burningOrange;
     }
 
-    .#{$errorClass}#{&} {
-      border: 1px solid $BurntSienna;
+    @include on-focus() {
+      border: 1px solid $burningOrange;
+    }
+
+    @include on-active() {
+      border: 1px solid $burningOrange;
+    }
+  }
+
+  &--dark {
+    .text-input__input {
+      color: $white;
+      background-color: $tundora;
+
+      @include transition((color, border));
+
+      &::placeholder {
+        color: $cloud;
+      }
+
+      .#{$errorClass}#{&} {
+        border: 1px solid $BurntSienna;
+      }
+    }
+
+    .#{$errorClass} + .#{$errorClass}__label {
+      color: $BurntSienna;
     }
   }
 
   &--light {
-    color: $mineShaft;
-    background-color: $mercury;
+    .text-input__input {
+      color: $mineShaft;
+      background-color: $mercury;
 
-    @include transition((color, border));
+      @include transition((color, border));
 
-    &::placeholder {
-      color: $dustyGray;
+      &::placeholder {
+        color: $dustyGray;
+      }
+
+      &.#{$errorClass} {
+        border: 1px solid $redOrange;
+      }
     }
 
-    &.#{$errorClass} {
-      border: 1px solid $redOrange;
+    .#{$errorClass} + .#{$errorClass}__label {
+      color: $redOrange;
     }
-  }
-
-  @include on-hover() {
-    color: $burningOrange;
-  }
-
-  @include on-focus() {
-    border: 1px solid $burningOrange;
-  }
-
-  @include on-active() {
-    border: 1px solid $burningOrange;
   }
 }
+

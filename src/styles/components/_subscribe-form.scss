@@ -1,0 +1,60 @@
+.subscribe-form {
+  &__title {
+    margin-bottom: 14px;
+    font-family: $secondary-font-stack;
+    font-size: 18px;
+
+    @include media('medium') {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 22px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+
+    @include media('wide') {
+      flex-direction: row;
+    }
+  }
+
+  &__input-label {
+    margin-bottom: 18px;
+
+    @include media('medium') {
+      margin-bottom: 21px;
+    }
+
+    @include media('large') {
+      margin-bottom: 20px;
+      max-width: 342px;
+    }
+
+    @include media('wide') {
+      flex-grow: 1;
+      margin-right: 30px;
+      max-width: none;
+    }
+  }
+
+  &__input {
+    @include media('medium') {
+      padding: 15px 23px;
+    }
+  }
+
+  &__button {
+    align-self: flex-start;
+    padding: 12px 23px;
+
+    @include media('medium') {
+      padding: 16px 23px;
+    }
+
+    @include media('large') {
+      //padding: 16px 23px;
+    }
+  }
+}
