@@ -2,8 +2,8 @@ include ../../components/phone-link
 
 mixin map
   .map&attributes(attributes)
-    .map__map.map-js
-    .map__info.map-info
+    .map__map.map--black-white-filter.map-js
+    .map__info.map-info.map-info-js
       button(type='button' aria-label='Закрыть').btn.btn--icon.map-info__close-btn.map-info__close-btn-js
         svg
           use(xlink:href='images/sprites.svg#search-close-form')
@@ -11,3 +11,6 @@ mixin map
         .map-info__title Студия “High pass”
         .map-info__text 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
         +phone-link().map-info__phone
+    button(type='button' aria-label='Показать информацию о расположении офиса').btn.btn--icon.map-info__open-btn.map-info__open-btn-js
+      svg
+        use(xlink:href='images/sprites.svg#question')
