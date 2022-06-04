@@ -8,5 +8,5 @@ mixin card(title, date, tagText, href='#')
           +tag(tagText).card__tag
         block
 
-    a(href=href).link.link--text.card__title= title
+    a(href=href).link.link--text-light.card__title= title
     +date(date).card__date

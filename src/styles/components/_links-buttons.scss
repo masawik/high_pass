@@ -18,6 +18,12 @@
     }
   }
 
+  &--text-light {
+    @include on-focus() {
+      background-color: $romantic;
+    }
+  }
+
   &--icon {
     color: $secondaryTextColor;
 
