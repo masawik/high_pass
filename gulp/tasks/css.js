@@ -24,10 +24,10 @@ export const styles = () => {
       grid: true,
       overrideBrowserslist: ['last 3 versions']
     })))
-    .pipe(app.plugins.if(app.isBuild, webpCSS({
+    .pipe(webpCSS({
       webpClass: ".webp",
       noWebpClass: ".no-webp"
-    })))
+    }))
     .pipe(app.plugins.if(app.isBuild, groupMediaQueries()))
     .pipe(app.plugins.if(app.isBuild, cleanCSS({level: 2})))
     .pipe(app.plugins.if(app.isDev, app.plugins.sourcemaps.write()))

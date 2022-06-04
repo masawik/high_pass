@@ -2,6 +2,7 @@ import fileInclude from 'gulp-file-include'
 import webpHtmlNoSvg from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
 import pug from 'gulp-pug'
+import strip from 'gulp-strip-comments'
 
 export const html = () => {
   return app.gulp.src(app.path.src.html)
@@ -12,7 +13,7 @@ export const html = () => {
     // .pipe(fileInclude())
     .pipe(pug())
     .pipe(app.plugins.replace(/@images\//g, 'images/'))
-    .pipe(app.plugins.if(app.isBuild, webpHtmlNoSvg()))
+    // .pipe(app.plugins.if(app.isBuild, webpHtmlNoSvg()))
     .pipe(app.plugins.if(app.isBuild, versionNumber({
       'value': '%DT%',
       'append': {
@@ -27,6 +28,7 @@ export const html = () => {
         'file': 'gulp/version.json'
       }
     })))
+    .pipe(app.plugins.if(app.isBuild, strip()))
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream())
 }

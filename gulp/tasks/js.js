@@ -8,6 +8,7 @@ export const js = () => {
     })))
     .pipe(webpack({
       mode: app.isDev ? 'development' : 'production',
+      ...(app.isDev && {devtool: 'source-map'}),
       output: {
         filename: 'app.min.js'
       }

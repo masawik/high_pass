@@ -10,11 +10,11 @@ export const images = () => {
 
     //img to webp
     .pipe(app.plugins.newer((app.path.build.images)))
-    .pipe(app.plugins.if(app.isBuild, webp()))
-    .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+    .pipe(webp())
+    .pipe(app.gulp.dest(app.path.build.images))
 
     //Minimizing images
-    .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.images)))
+    .pipe(app.gulp.src(app.path.src.images))
     .pipe(app.plugins.if(app.isBuild, app.plugins.newer((app.path.build.images))))
     .pipe(app.plugins.if(app.isBuild, imagemin({
       progressive: true,
@@ -22,7 +22,7 @@ export const images = () => {
       interlaced: true,
       optimizationLevel: 3
     })))
-    .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+    .pipe(app.gulp.dest(app.path.build.images))
 
     //just copy svg
     .pipe(app.gulp.src(app.path.src.svg))
