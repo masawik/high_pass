@@ -9,6 +9,8 @@ import {js} from "./gulp/tasks/js.js"
 import {images} from "./gulp/tasks/images.js"
 import {fonts} from "./gulp/tasks/fonts.js"
 import {svgSprite} from "./gulp/tasks/svgSprite.js"
+import ghPages from "gulp-gh-pages";
+
 
 global.app = {
   isBuild: process.argv.includes('--build'),
@@ -30,11 +32,12 @@ const mainTasks = gulp.parallel(html, styles, js, images, svgSprite, fonts)
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset, mainTasks)
+const deploy = gulp.series(build, ghPages)
 
 gulp.task('default', dev)
 
 export {
   dev,
   build,
-  styles
+  deploy
 }

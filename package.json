@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build --build"
+    "build": "gulp build --build",
+    "deploy": "gulp deploy"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
