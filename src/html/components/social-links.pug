@@ -1,8 +1,0 @@
-- var socialLinks = [{'sprite': 'ig', 'href': '#', ariaLabel: 'наша страница в Инстаграм'},{'sprite': 'fb', 'href': '#', ariaLabel: 'наша страница Фейсбук'},{'sprite': 'vk', 'href': '#', ariaLabel: 'наша страница Вконтакте'}]
-
-ul.social-links
-  each socialItem in socialLinks
-    li.social-links__item
-      a(href=socialItem.href, aria-label=socialItem.ariaLabel).link.link--icon
-        svg
-          use(xlink:href='images/sprites.svg#' + socialItem.sprite)
