@@ -6,3 +6,7 @@
 * Pug
 * Sass
 * Gulp
+* JS
+  - Yandex map
+  - GreenSock
+  - Just-validate
