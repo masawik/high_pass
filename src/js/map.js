@@ -34,11 +34,11 @@ class Map {
   }
 
   removeBlackWhiteFilter() {
-    this.$mapContainer.classList.remove('map--black-white-filter')
+    this.$mapContainer.classList.remove('map__map--black-white-filter')
   }
 
   addBlackWhiteFilter() {
-    this.$mapContainer.classList.add('map--black-white-filter')
+    this.$mapContainer.classList.add('map__map--black-white-filter')
   }
 
   initializeAnimation() {
