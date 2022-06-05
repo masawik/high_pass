@@ -5,7 +5,7 @@ class Map {
   constructor() {
     this.$mapContainer = document.querySelector('.map-js')
     this.$closeMapInfoBtn = document.querySelector('.map-info__close-btn-js')
-    this.$openMapInfoBtn = document.querySelector('.map-info__open-btn-js')
+    this.$openMapInfoBtn = document.querySelector('.map__open-map-info-btn-js')
     this.$mapInfoBlock = document.querySelector('.map-info-js')
 
     this.maps = null

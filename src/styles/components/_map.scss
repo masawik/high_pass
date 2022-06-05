@@ -2,7 +2,7 @@
   @include transition((filter));
 }
 
-.map--black-white-filter [class*="ground-pane"] {
+.map__map--black-white-filter [class*="ground-pane"] {
   filter: grayscale(1);
 }
 
@@ -38,6 +38,15 @@
       bottom: 0;
       left: 0;
     }
+  }
+
+  &__open-map-info-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 30px;
+    display: none;
+    color: $doveGray;
+    @include size(40px);
   }
 }
 
@@ -76,15 +85,6 @@
     color: $doveGray;
 
     @include size(20px);
-  }
-
-  &__open-btn {
-    position: absolute;
-    right: 15px;
-    bottom: 30px;
-    display: none;
-    color: $doveGray;
-    @include size(40px);
   }
 
   &__title {
